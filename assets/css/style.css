@@ -92,9 +92,7 @@ header {
     }
 
     &:hover {
-      .case-card-image img {
-        max-width: 85%;
-      }
+
       .case-card-content {
         transform: translateY(0);
         @media (min-width: 768px) {
