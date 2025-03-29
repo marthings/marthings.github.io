@@ -1,0 +1,302 @@
+/* Design Tokens + Hjälpklasser */
+@layer tokens {
+
+  :root {
+    /* Colors */
+    --surface: hsl(0, 0%, 100%);
+    --surface-container: hsl(0, 0%, 95%);
+    --surface-container-1: hsl(0, 0%, 90%);
+    --surface-container-2: hsl(0, 0%, 85%);
+    --surface-container-3: hsl(0, 0%, 80%);
+    --on-surface: hsl(240, 10%, 10%);
+
+    --accent-50:  hsl(210, 100%, 95%);
+    --accent-100: hsl(210, 100%, 90%);
+    --accent-200: hsl(210, 100%, 80%);
+    --accent-300: hsl(210, 100%, 70%);
+    --accent-400: hsl(210, 100%, 60%);
+    --accent-500: hsl(210, 100%, 50%);
+    --accent-600: hsl(210, 100%, 40%);
+    --accent-700: hsl(210, 100%, 30%);
+    --accent-800: hsl(210, 100%, 20%);
+    --accent-900: hsl(210, 100%, 10%);
+    --accent-950: hsl(210, 100%, 5%);
+
+    --highlight-50: hsl(110, 100%, 95%);
+    --highlight-100: hsl(110, 100%, 90%);
+    --highlight-200: hsl(110, 100%, 80%);
+    --highlight-300: hsl(110, 100%, 70%);
+    --highlight-400: hsl(110, 100%, 60%);
+    --highlight-500: hsl(110, 100%, 50%);
+    --highlight-600: hsl(110, 100%, 40%);
+    --highlight-700: hsl(110, 100%, 30%);
+    --highlight-800: hsl(110, 100%, 20%);
+    --highlight-900: hsl(110, 100%, 10%);
+    --highlight-950: hsl(110, 100%, 5%);
+
+    --case-red: hsl(350, 100%, 70%);
+    --case-on-red: hsl(350, 100%, 10%);
+    --case-blue: hsl(210, 100%, 70%);
+    --case-on-blue: hsl(210, 100%, 10%);
+    --case-green: hsl(120, 100%, 70%);
+    --case-on-green: hsl(120, 100%, 10%);
+    --case-yellow: hsl(40, 100%, 70%);
+    --case-on-yellow: hsl(60, 100%, 10%);
+    --case-purple: hsl(270, 100%, 70%);
+    --case-on-purple: hsl(270, 100%, 10%);
+    --case-orange: hsl(20, 100%, 70%);
+    --case-on-orange: hsl(20, 100%, 10%);
+    --case-pink: hsl(330, 100%, 70%);
+    --case-on-pink: hsl(330, 100%, 10%);
+    --case-brown: hsl(30, 100%, 70%);
+    --case-on-brown: hsl(30, 100%, 10%);
+
+    /* Spacing */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+    --space-7: 56px;
+    --space-8: 64px;
+
+    /* Typography */
+    --font-size-1: clamp(16px, 1.5vw, 24px);
+    --font-size-2: clamp(20px, 2vw, 32px);
+    --font-size-3: clamp(28px, 3vw, 40px);
+    --font-size-4: clamp(32px, 4vw, 48px);
+    --font-size-5: clamp(40px, 5vw, 56px);
+    --font-size-6: clamp(48px, 6vw, 64px);
+    --font-size-7: clamp(56px, 7vw, 72px);
+    --font-size-8: clamp(64px, 8vw, 80px);
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --radius-small: 4px;
+    --radius-medium: 8px;
+    --radius-large: 16px;
+
+    --elevation-1: 0px 1px 3px hsl(0, 0%, 0%, 0.2);
+    --elevation-2: 0px 4px 6px hsl(0, 0%, 0%, 0.15);
+    --elevation-3: 0px 10px 20px hsl(0, 0%, 0%, 0.1);
+  }
+
+  @media (prefers-scheme: dark) {
+    :root {
+      --surface: hsl(240, 10%, 10%);
+      --on-surface: hsl(0, 0%, 100%);
+
+      --accent-50:  hsl(210, 100%, 85%);
+      --accent-100: hsl(210, 100%, 75%);
+      --accent-200: hsl(210, 100%, 65%);
+      --accent-300: hsl(210, 100%, 55%);
+      --accent-400: hsl(210, 100%, 50%);
+      --accent-500: hsl(210, 100%, 45%);
+      --accent-600: hsl(210, 100%, 40%);
+      --accent-700: hsl(210, 100%, 35%);
+      --accent-800: hsl(210, 100%, 30%);
+      --accent-900: hsl(210, 100%, 25%);
+      --accent-950: hsl(210, 100%, 20%);
+      --highlight-50: hsl(110, 100%, 85%);
+      --highlight-100: hsl(110, 100%, 75%);
+      --highlight-200: hsl(110, 100%, 65%);
+      --highlight-300: hsl(110, 100%, 55%);
+      --highlight-400: hsl(110, 100%, 50%);
+      --highlight-500: hsl(110, 100%, 45%);
+      --highlight-600: hsl(110, 100%, 40%);
+      --highlight-700: hsl(110, 100%, 35%);
+      --highlight-800: hsl(110, 100%, 30%);
+      --highlight-900: hsl(110, 100%, 25%);
+      --highlight-950: hsl(110, 100%, 20%);
+
+      --elevation-1: 0px 1px 3px hsl(0, 0%, 100%, 0.08);
+      --elevation-2: 0px 4px 6px hsl(0, 0%, 100%, 0.06);
+      --elevation-3: 0px 10px 20px hsl(0, 0%, 100%, 0.04);
+    }
+  }
+
+  /* Text colors */
+  .text-surface    { color: var(--on-surface); }
+
+  .text-accent-50 { color: var(--accent-50); }
+  .text-accent-100 { color: var(--accent-100); }
+  .text-accent-200 { color: var(--accent-200); }
+  .text-accent-300 { color: var(--accent-300); }
+  .text-accent-400 { color: var(--accent-400); }
+  .text-accent-500 { color: var(--accent-500); }
+  .text-accent-600 { color: var(--accent-600); }
+  .text-accent-700 { color: var(--accent-700); }
+  .text-accent-800 { color: var(--accent-800); }
+  .text-accent-900 { color: var(--accent-900); }
+  .text-accent-950 { color: var(--accent-950); }
+
+  .text-highlight-50 { color: var(--highlight-50); }
+  .text-highlight-100 { color: var(--highlight-100); }
+  .text-highlight-200 { color: var(--highlight-200); }
+  .text-highlight-300 { color: var(--highlight-300); }
+  .text-highlight-400 { color: var(--highlight-400); }
+  .text-highlight-500 { color: var(--highlight-500); }  
+  .text-highlight-600 { color: var(--highlight-600); }
+  .text-highlight-700 { color: var(--highlight-700); }
+  .text-highlight-800 { color: var(--highlight-800); }
+  .text-highlight-900 { color: var(--highlight-900); }
+  .text-highlight-950 { color: var(--highlight-950); }
+
+  .text-case-red { color: var(--case-on-red); }
+  .text-case-blue { color: var(--case-on-blue); }
+  .text-case-green { color: var(--case-on-green); }
+  .text-case-yellow { color: var(--case-on-yellow); }
+  .text-case-purple { color: var(--case-on-purple); }
+  .text-case-orange { color: var(--case-on-orange); }
+  .text-case-pink { color: var(--case-on-pink); }
+
+  /* Background colors */
+  .bg-surface      { background-color: var(--surface); }
+  .bg-accent-100   { background-color: var(--accent-100); }
+  .bg-accent-200   { background-color: var(--accent-200); }
+  .bg-accent-300   { background-color: var(--accent-300); }
+  .bg-accent-400   { background-color: var(--accent-400); }
+  .bg-accent-500   { background-color: var(--accent-500); }
+  .bg-accent-600   { background-color: var(--accent-600); }
+  .bg-accent-700   { background-color: var(--accent-700); }
+  .bg-accent-800   { background-color: var(--accent-800); }
+  .bg-accent-900   { background-color: var(--accent-900); }
+  .bg-accent-950   { background-color: var(--accent-950); }
+
+  .bg-highlight-50   { background-color: var(--highlight-50); } 
+  .bg-highlight-100   { background-color: var(--highlight-100); }
+  .bg-highlight-200   { background-color: var(--highlight-200); }
+  .bg-highlight-300   { background-color: var(--highlight-300); }
+  .bg-highlight-400   { background-color: var(--highlight-400); }
+  .bg-highlight-500   { background-color: var(--highlight-500); }
+  .bg-highlight-600   { background-color: var(--highlight-600); }
+  .bg-highlight-700   { background-color: var(--highlight-700); }
+  .bg-highlight-800   { background-color: var(--highlight-800); }
+  .bg-highlight-900   { background-color: var(--highlight-900); }
+  .bg-highlight-950   { background-color: var(--highlight-950); }
+
+  .bg-case-red { background-color: var(--case-red); }
+  .bg-case-blue { background-color: var(--case-blue); }
+  .bg-case-green { background-color: var(--case-green); }
+  .bg-case-yellow { background-color: var(--case-yellow); }
+  .bg-case-purple { background-color: var(--case-purple); }
+  .bg-case-orange { background-color: var(--case-orange); }
+  .bg-case-pink { background-color: var(--case-pink); }
+  .bg-case-brown { background-color: var(--case-brown); }
+
+  /* Padding */
+  .p-1  { padding: var(--space-1); }
+  .p-2  { padding: var(--space-2); }
+  .p-3  { padding: var(--space-3); }
+  .p-4  { padding: var(--space-4); }
+  .p-5  { padding: var(--space-5); }
+  .p-6  { padding: var(--space-6); }
+  .p-7  { padding: var(--space-7); }
+  .p-8  { padding: var(--space-8); }
+
+  .pt-1 { padding-top: var(--space-1); }
+  .pr-1 { padding-right: var(--space-1); }
+  .pb-1 { padding-bottom: var(--space-1); }
+  .pl-1 { padding-left: var(--space-1); }
+  .pt-2 { padding-top: var(--space-2); }
+  .pb-2 { padding-bottom: var(--space-2); }
+  .pr-2 { padding-right: var(--space-2); }
+  .pl-2 { padding-left: var(--space-2); }
+  .pt-3 { padding-top: var(--space-3); }
+  .pb-3 { padding-bottom: var(--space-3); }
+  .pr-3 { padding-right: var(--space-3); }
+  .pl-3 { padding-left: var(--space-3); }
+
+  /* Margin */
+  .m-1  { margin: var(--space-1); }
+  .m-2  { margin: var(--space-2); }
+  .mt-1 { margin-top: var(--space-1); }
+  .mb-1 { margin-bottom: var(--space-1); }
+  .mr-1 { margin-right: var(--space-1); } 
+  .ml-1 { margin-left: var(--space-1); }
+  .mt-2 { margin-top: var(--space-2); }
+  .mb-2 { margin-bottom: var(--space-2); }
+  .mr-2 { margin-right: var(--space-2); }
+  .ml-2 { margin-left: var(--space-2); }
+  .mt-3 { margin-top: var(--space-3); }
+  .mb-3 { margin-bottom: var(--space-3); }
+  .mr-3 { margin-right: var(--space-3); }
+  .ml-3 { margin-left: var(--space-3); }
+
+  .gap-1 { gap: var(--space-1); }
+  .gap-2 { gap: var(--space-2); }
+  .gap-3 { gap: var(--space-3); }
+  .gap-4 { gap: var(--space-4); }
+  .gap-5 { gap: var(--space-5); }
+  .gap-6 { gap: var(--space-6); }
+  .gap-7 { gap: var(--space-7); }
+  .gap-8 { gap: var(--space-8); }
+
+  /* Typography */
+  .text-sm    { font-size: var(--font-size-1); }
+  .text-base  { font-size: var(--font-size-2); }
+  .text-lg    { font-size: var(--font-size-3); }
+  .text-xl    { font-size: var(--font-size-4); }
+  .text-2xl    { font-size: var(--font-size-5); }
+  .text-3xl    { font-size: var(--font-size-6); }
+  .text-4xl    { font-size: var(--font-size-7); }
+  .text-5xl    { font-size: var(--font-size-8); }
+
+  .font-regular { font-weight: var(--font-weight-regular); }
+  .font-medium  { font-weight: var(--font-weight-medium); }
+  .font-bold    { font-weight: var(--font-weight-bold); }
+
+  /* Radius */
+  .rounded-sm { border-radius: var(--radius-small); }
+  .rounded-md { border-radius: var(--radius-medium); }
+  .rounded-lg { border-radius: var(--radius-large); }
+
+  /* Shadow */
+  .shadow-1 { box-shadow: var(--elevation-1); }
+  .shadow-2 { box-shadow: var(--elevation-2); }
+  .shadow-3 { box-shadow: var(--elevation-3); }
+
+  /* Flex */
+  .flex { display: flex; }
+  .flex-row { flex-direction: row; }
+  .flex-col { flex-direction: column; }
+  .flex-wrap { flex-wrap: wrap; }
+  .flex-nowrap { flex-wrap: nowrap; }
+
+  /* Align */
+  .items-center { align-items: center; }
+  .items-start { align-items: flex-start; }
+  .items-end { align-items: flex-end; }
+  .items-baseline { align-items: baseline; }
+  .items-stretch { align-items: stretch; }
+
+  /* Justify */
+  .justify-center { justify-content: center; }
+  .justify-start { justify-content: flex-start; }
+  .justify-end { justify-content: flex-end; }
+  .justify-between { justify-content: space-between; }
+  .justify-around { justify-content: space-around; }
+
+  /* Grid */
+  .grid { display: grid; }
+  .grid-cols-1 { grid-template-columns: 1fr; }
+  .grid-cols-2 { grid-template-columns: 1fr 1fr; }
+  .grid-cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .grid-cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  @media (min-width: 768px) {
+    .grid-cols-1-md { grid-template-columns: 1fr; }
+    .grid-cols-2-md { grid-template-columns: 1fr 1fr; }
+    .grid-cols-3-md { grid-template-columns: 1fr 1fr 1fr; }
+    .grid-cols-4-md { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  }
+  @media (min-width: 1024px) {
+    .grid-cols-1-lg { grid-template-columns: 1fr; }
+    .grid-cols-2-lg { grid-template-columns: 1fr 1fr; }
+    .grid-cols-3-lg { grid-template-columns: 1fr 1fr 1fr; }
+    .grid-cols-4-lg { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  }
+
+}
