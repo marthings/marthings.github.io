@@ -34,21 +34,21 @@
     --highlight-900: hsl(110, 100%, 10%);
     --highlight-950: hsl(110, 100%, 5%);
 
-    --case-red: hsl(350, 100%, 70%);
+    --case-red: hsl(350, 100%, 80%);
     --case-on-red: hsl(350, 100%, 10%);
-    --case-blue: hsl(210, 100%, 70%);
+    --case-blue: hsl(210, 100%, 80%);
     --case-on-blue: hsl(210, 100%, 10%);
-    --case-green: hsl(120, 100%, 70%);
+    --case-green: hsl(120, 100%, 80%);
     --case-on-green: hsl(120, 100%, 10%);
-    --case-yellow: hsl(40, 100%, 70%);
+    --case-yellow: hsl(40, 100%, 80%);
     --case-on-yellow: hsl(60, 100%, 10%);
-    --case-purple: hsl(270, 100%, 70%);
+    --case-purple: hsl(270, 100%, 80%);
     --case-on-purple: hsl(270, 100%, 10%);
-    --case-orange: hsl(20, 100%, 70%);
+    --case-orange: hsl(20, 100%, 80%);
     --case-on-orange: hsl(20, 100%, 10%);
-    --case-pink: hsl(330, 100%, 70%);
+    --case-pink: hsl(330, 100%, 80%);
     --case-on-pink: hsl(330, 100%, 10%);
-    --case-brown: hsl(30, 100%, 70%);
+    --case-brown: hsl(30, 100%, 80%);
     --case-on-brown: hsl(30, 100%, 10%);
 
     /* Spacing */
