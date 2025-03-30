@@ -1,5 +1,9 @@
 @layer reset, components, tokens;
 
+@view-transition {
+  navigation: auto;
+}
+
 :root {
   --mono-1000: hsla(20, 10%, 0%);
   --mono-900: hsla(20, 10%, 10%);
@@ -22,6 +26,7 @@ body {
   color: var(--mono-900);
   padding: 1rem;
   font-weight: 9700;
+  line-height: 1.5;
   font-size: 20px;
   background-color: var(--mono-100);
   @media (min-width: 768px) {
@@ -32,24 +37,68 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   line-height: 1.1;
+  letter-spacing: -0.020em;
+}
+h1 {
+  font-size: var(--font-size-4);
+}
+h2 {
+  font-size: var(--font-size-3);
+}
+h3 {
+  font-size: var(--font-size-2);
+}
+
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .lead {
   text-wrap: balance;
-  margin: 4rem 0;
-
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     max-width: 60dvw;
+  }
+}
+
+.prose {
+  margin-block: var(--space-8);
+  padding: var(--space-4);
+  margin-inline: auto;
+  > * {
+    margin-block-end: var(--space-3);
+  }
+  @media (min-width: 768px) { 
+    width: min(60dvw, 720px);
+  }
+  .lead {
+    font-size: var(--font-size-2);
+    line-height: 1.4;
   }
 }
 
 .link {
   position: relative;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   display: inline-block;
   text-underline-offset: 8px;
-  text-decoration-thickness: 3px;
-  text-decoration-style: wavy;
+  transition: all 0.3s ease;
+  &:hover {
+    text-decoration-thickness: 2px;
+    text-decoration-style: wavy;
+  }
+}
+
+.badge {
+  background-color: var(--mono-900);
+  color: var(--mono-0);
+  padding: var(--space-0) var(--space-2);
+  border-radius: var(--radius-large);
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-bold);
+  display: inline-block;
 }
 
 header {
@@ -60,30 +109,14 @@ header {
 
   a {
     text-decoration: none;
-    font-size: 1rem;
+
     color: inherit;
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     margin: 0;
     display: inline-block;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-
-    a {
-      text-decoration: none;
-      color: var(--mono-900);
-
-
-      &:hover {
-        background-color: var(--mono-200);
-      }
-    }
   }
 }
 
@@ -92,6 +125,8 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    transition: opacity 0.3s ease;
 
     aspect-ratio: 3 / 4;
 
@@ -112,6 +147,10 @@ header {
         }
       }
     }
+  }
+
+  .project-list:has(.case-card:hover) .case-card:not(:hover) {
+    opacity: 0.5;
   }
 
   .case-card-content {
@@ -168,6 +207,12 @@ header {
     @media (min-width: 768px) {
       max-width: min(80%, 720px);
       max-height: min(80%, 720px);
+      border-radius: var(--radius-large) 0 var(--radius-large) 0;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: min(80%, 1024px);
+      max-height: min(80%, 1024px);
       border-radius: var(--radius-large) 0 var(--radius-large) 0;
     }
   }
