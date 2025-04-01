@@ -1,7 +1,21 @@
 /* Design Tokens + Hjälpklasser */
 @layer tokens {
-
+  
   :root {
+    --mono-1000: hsla(20, 10%, 0%);
+    --mono-900: hsla(20, 10%, 10%);
+    --mono-800: hsla(20, 10%, 20%);
+    --mono-700: hsla(20, 10%, 30%);
+    --mono-600: hsla(20, 10%, 40%);
+    --mono-500: hsla(20, 10%, 50%);
+    --mono-400: hsla(20, 10%, 60%);
+    --mono-300: hsla(20, 10%, 70%);
+    --mono-200: hsla(20, 10%, 80%);
+    --mono-100: hsla(20, 10%, 90%);
+    --mono-50: hsla(20, 10%, 95%);
+    --mono-0: hsla(20, 10%, 100%);
+    --on-mono: hsl(20, 10%, 10%);
+    
     /* Colors */
     --surface: hsl(0, 0%, 100%);
     --surface-container: hsl(0, 0%, 95%);
@@ -10,46 +24,28 @@
     --surface-container-3: hsl(0, 0%, 80%);
     --on-surface: hsl(240, 10%, 10%);
 
-    --accent-50:  hsl(210, 100%, 95%);
-    --accent-100: hsl(210, 100%, 90%);
-    --accent-200: hsl(210, 100%, 80%);
-    --accent-300: hsl(210, 100%, 70%);
-    --accent-400: hsl(210, 100%, 60%);
-    --accent-500: hsl(210, 100%, 50%);
-    --accent-600: hsl(210, 100%, 40%);
-    --accent-700: hsl(210, 100%, 30%);
-    --accent-800: hsl(210, 100%, 20%);
-    --accent-900: hsl(210, 100%, 10%);
-    --accent-950: hsl(210, 100%, 5%);
-
-    --highlight-50: hsl(110, 100%, 95%);
-    --highlight-100: hsl(110, 100%, 90%);
-    --highlight-200: hsl(110, 100%, 80%);
-    --highlight-300: hsl(110, 100%, 70%);
-    --highlight-400: hsl(110, 100%, 60%);
-    --highlight-500: hsl(110, 100%, 50%);
-    --highlight-600: hsl(110, 100%, 40%);
-    --highlight-700: hsl(110, 100%, 30%);
-    --highlight-800: hsl(110, 100%, 20%);
-    --highlight-900: hsl(110, 100%, 10%);
-    --highlight-950: hsl(110, 100%, 5%);
-
-    --case-red: hsl(350, 100%, 80%);
-    --case-on-red: hsl(350, 100%, 10%);
+    --case-red: hsl(0, 100%, 70%);
+    --on-case-red: hsl(350, 100%, 10%);
     --case-blue: hsl(210, 100%, 80%);
-    --case-on-blue: hsl(210, 100%, 10%);
+    --on-case-blue: hsl(210, 100%, 10%);
     --case-green: hsl(120, 100%, 80%);
-    --case-on-green: hsl(120, 100%, 10%);
+    --on-case-green: hsl(120, 100%, 10%);
     --case-yellow: hsl(40, 100%, 80%);
-    --case-on-yellow: hsl(60, 100%, 10%);
+    --on-case-yellow: hsl(60, 100%, 10%);
     --case-purple: hsl(270, 100%, 80%);
-    --case-on-purple: hsl(270, 100%, 10%);
+    --on-case-purple: hsl(270, 100%, 10%);
     --case-orange: hsl(20, 100%, 80%);
-    --case-on-orange: hsl(20, 100%, 10%);
+    --on-case-orange: hsl(20, 100%, 10%);
     --case-pink: hsl(330, 100%, 80%);
-    --case-on-pink: hsl(330, 100%, 10%);
+    --on-case-pink: hsl(330, 100%, 10%);
     --case-brown: hsl(30, 100%, 80%);
-    --case-on-brown: hsl(30, 100%, 10%);
+    --on-case-brown: hsl(30, 100%, 10%);
+    --case-gray: hsl(20, 10%, 80%);
+    --on-case-gray: hsl(20, 10%, 10%);
+    --case-lime: hsl(80, 100%, 80%);
+    --on-case-lime: hsl(80, 100%, 10%);
+    --case-teal: hsl(180, 100%, 80%);
+    --on-case-teal: hsl(180, 100%, 10%);
 
     /* Spacing */
     --space-0: 4px;
@@ -82,104 +78,74 @@
     --radius-large: 16px;
     --radius-round: 9999px;
 
-    --elevation-1: 0px 1px 3px hsl(0, 0%, 0%, 0.2);
-    --elevation-2: 0px 4px 6px hsl(0, 0%, 0%, 0.15);
-    --elevation-3: 0px 10px 20px hsl(0, 0%, 0%, 0.1);
   }
 
-  @media (prefers-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
     :root {
-      --surface: hsl(240, 10%, 10%);
+      --surface: hsl(240, 10%, 15%);
       --on-surface: hsl(0, 0%, 100%);
+      --mono-100: hsl(240, 10%, 15%);
+      --on-mono: hsl(0, 0%, 100%);
 
-      --accent-50:  hsl(210, 100%, 85%);
-      --accent-100: hsl(210, 100%, 75%);
-      --accent-200: hsl(210, 100%, 65%);
-      --accent-300: hsl(210, 100%, 55%);
-      --accent-400: hsl(210, 100%, 50%);
-      --accent-500: hsl(210, 100%, 45%);
-      --accent-600: hsl(210, 100%, 40%);
-      --accent-700: hsl(210, 100%, 35%);
-      --accent-800: hsl(210, 100%, 30%);
-      --accent-900: hsl(210, 100%, 25%);
-      --accent-950: hsl(210, 100%, 20%);
-      --highlight-50: hsl(110, 100%, 85%);
-      --highlight-100: hsl(110, 100%, 75%);
-      --highlight-200: hsl(110, 100%, 65%);
-      --highlight-300: hsl(110, 100%, 55%);
-      --highlight-400: hsl(110, 100%, 50%);
-      --highlight-500: hsl(110, 100%, 45%);
-      --highlight-600: hsl(110, 100%, 40%);
-      --highlight-700: hsl(110, 100%, 35%);
-      --highlight-800: hsl(110, 100%, 30%);
-      --highlight-900: hsl(110, 100%, 25%);
-      --highlight-950: hsl(110, 100%, 20%);
-
-      --elevation-1: 0px 1px 3px hsl(0, 0%, 100%, 0.08);
-      --elevation-2: 0px 4px 6px hsl(0, 0%, 100%, 0.06);
-      --elevation-3: 0px 10px 20px hsl(0, 0%, 100%, 0.04);
+      --case-red: hsl(0, 100%, 30%);
+      --on-case-red: hsl(350, 100%, 90%);
+      --case-blue: hsl(210, 100%, 30%);
+      --on-case-blue: hsl(210, 100%, 90%);
+      --case-green: hsl(120, 100%, 30%);
+      --on-case-green: hsl(120, 100%, 90%);
+      --case-yellow: hsl(40, 100%, 30%);
+      --on-case-yellow: hsl(60, 100%, 90%);
+      --case-purple: hsl(270, 100%, 30%);
+      --on-case-purple: hsl(270, 100%, 90%);
+      --case-orange: hsl(20, 100%, 30%);
+      --on-case-orange: hsl(20, 100%, 90%);
+      --case-pink: hsl(330, 100%, 30%);
+      --on-case-pink: hsl(330, 100%, 90%);
+      --case-brown: hsl(30, 100%, 30%);
+      --on-case-brown: hsl(30, 100%, 90%);
+      --case-gray: hsl(20, 10%, 30%);
+      --on-case-gray: hsl(20, 10%, 80%);
+      --case-lime: hsl(80, 100%, 30%);
+      --on-case-lime: hsl(80, 100%, 90%);
+      --case-teal: hsl(180, 100%, 30%);
+      --on-case-teal: hsl(180, 100%, 90%);
     }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 1000;
+    line-height: 1.2;
+    letter-spacing: -0.020em;
+  }
+  h1 {
+    font-size: var(--font-size-4);
+  }
+  h2 {
+    font-size: var(--font-size-3);
+  }
+  h3 {
+    font-size: var(--font-size-2);
   }
 
   /* Text colors */
   .text-surface    { color: var(--on-surface); }
+  .text-mono { color: var(--on-mono); }
 
-  .text-accent-50 { color: var(--accent-50); }
-  .text-accent-100 { color: var(--accent-100); }
-  .text-accent-200 { color: var(--accent-200); }
-  .text-accent-300 { color: var(--accent-300); }
-  .text-accent-400 { color: var(--accent-400); }
-  .text-accent-500 { color: var(--accent-500); }
-  .text-accent-600 { color: var(--accent-600); }
-  .text-accent-700 { color: var(--accent-700); }
-  .text-accent-800 { color: var(--accent-800); }
-  .text-accent-900 { color: var(--accent-900); }
-  .text-accent-950 { color: var(--accent-950); }
-
-  .text-highlight-50 { color: var(--highlight-50); }
-  .text-highlight-100 { color: var(--highlight-100); }
-  .text-highlight-200 { color: var(--highlight-200); }
-  .text-highlight-300 { color: var(--highlight-300); }
-  .text-highlight-400 { color: var(--highlight-400); }
-  .text-highlight-500 { color: var(--highlight-500); }  
-  .text-highlight-600 { color: var(--highlight-600); }
-  .text-highlight-700 { color: var(--highlight-700); }
-  .text-highlight-800 { color: var(--highlight-800); }
-  .text-highlight-900 { color: var(--highlight-900); }
-  .text-highlight-950 { color: var(--highlight-950); }
-
-  .text-case-red { color: var(--case-on-red); }
-  .text-case-blue { color: var(--case-on-blue); }
-  .text-case-green { color: var(--case-on-green); }
-  .text-case-yellow { color: var(--case-on-yellow); }
-  .text-case-purple { color: var(--case-on-purple); }
-  .text-case-orange { color: var(--case-on-orange); }
-  .text-case-pink { color: var(--case-on-pink); }
+  .text-case-red { color: var(--on-case-red); }
+  .text-case-blue { color: var(--on-case-blue); }
+  .text-case-green { color: var(--on-case-green); }
+  .text-case-yellow { color: var(--on-case-yellow); }
+  .text-case-purple { color: var(--on-case-purple); }
+  .text-case-orange { color: var(--on-case-orange); }
+  .text-case-pink { color: var(--on-case-pink); }
+  .text-case-brown { color: var(--on-case-brown); }
+  .text-case-gray { color: var(--on-case-gray); }
+  .text-case-lime { color: var(--on-case-lime); }
+  .text-case-teal { color: var(--on-case-teal); }
 
   /* Background colors */
   .bg-surface      { background-color: var(--surface); }
-  .bg-accent-100   { background-color: var(--accent-100); }
-  .bg-accent-200   { background-color: var(--accent-200); }
-  .bg-accent-300   { background-color: var(--accent-300); }
-  .bg-accent-400   { background-color: var(--accent-400); }
-  .bg-accent-500   { background-color: var(--accent-500); }
-  .bg-accent-600   { background-color: var(--accent-600); }
-  .bg-accent-700   { background-color: var(--accent-700); }
-  .bg-accent-800   { background-color: var(--accent-800); }
-  .bg-accent-900   { background-color: var(--accent-900); }
-  .bg-accent-950   { background-color: var(--accent-950); }
-
-  .bg-highlight-50   { background-color: var(--highlight-50); } 
-  .bg-highlight-100   { background-color: var(--highlight-100); }
-  .bg-highlight-200   { background-color: var(--highlight-200); }
-  .bg-highlight-300   { background-color: var(--highlight-300); }
-  .bg-highlight-400   { background-color: var(--highlight-400); }
-  .bg-highlight-500   { background-color: var(--highlight-500); }
-  .bg-highlight-600   { background-color: var(--highlight-600); }
-  .bg-highlight-700   { background-color: var(--highlight-700); }
-  .bg-highlight-800   { background-color: var(--highlight-800); }
-  .bg-highlight-900   { background-color: var(--highlight-900); }
-  .bg-highlight-950   { background-color: var(--highlight-950); }
+  .bg-mono { background-color: var(--mono-100); }
 
   .bg-case-red { background-color: var(--case-red); }
   .bg-case-blue { background-color: var(--case-blue); }
@@ -189,7 +155,9 @@
   .bg-case-orange { background-color: var(--case-orange); }
   .bg-case-pink { background-color: var(--case-pink); }
   .bg-case-brown { background-color: var(--case-brown); }
-
+  .bg-case-gray { background-color: var(--case-gray); }
+  .bg-case-lime { background-color: var(--case-lime); }
+  .bg-case-teal { background-color: var(--case-teal); }
   /* Padding */
   .p-1  { padding: var(--space-1); }
   .p-2  { padding: var(--space-2); }
@@ -270,8 +238,8 @@
 
   /* Typography */
   .text-xs    { font-size: var(--font-size-0); }
-  .text-sm    { font-size: var(--font-size-1); }
-  .text-base  { font-size: var(--font-size-2); }
+  .text-base    { font-size: var(--font-size-1); }
+  .text-md  { font-size: var(--font-size-2); }
   .text-lg    { font-size: var(--font-size-3); }
   .text-xl    { font-size: var(--font-size-4); }
   .text-2xl    { font-size: var(--font-size-5); }
