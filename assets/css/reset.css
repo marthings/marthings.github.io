@@ -16,6 +16,12 @@
     }
   }
 
+  :focus {
+    outline: 3px solid black;
+    outline-offset: 4px;
+    border-radius: 0.25rem;
+  }
+
   a {
     color: inherit;
   }

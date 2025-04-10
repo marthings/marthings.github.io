@@ -283,6 +283,9 @@
   .justify-between { justify-content: space-between; }
   .justify-around { justify-content: space-around; }
 
+  .italic { font-style: italic; }
+  .bold { font-weight: bold; }
+
   /* Grid */
   .grid { display: grid; }
   .grid-cols-1 { grid-template-columns: 1fr; }
