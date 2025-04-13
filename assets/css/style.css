@@ -45,7 +45,7 @@
 
   .prose {
     margin-block: var(--space-8);
-
+    text-wrap: balance;
     margin-inline: auto;
     > * {
       margin-block-end: var(--space-3);
