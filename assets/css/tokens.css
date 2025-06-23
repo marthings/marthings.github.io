@@ -80,7 +80,7 @@
 
   }
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     :root {
       --surface: hsl(240, 10%, 15%);
       --on-surface: hsl(0, 0%, 100%);
@@ -110,7 +110,7 @@
       --case-teal: hsl(180, 100%, 30%);
       --on-case-teal: hsl(180, 100%, 90%);
     }
-  }
+  } */
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 1000;
